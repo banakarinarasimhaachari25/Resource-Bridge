@@ -1,0 +1,219 @@
+---
+name: ResourceBridge Pitch System
+colors:
+  surface: '#fff8f6'
+  surface-dim: '#efd5cb'
+  surface-bright: '#fff8f6'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#fff1ec'
+  surface-container: '#ffe9e2'
+  surface-container-high: '#fde3d9'
+  surface-container-highest: '#f7ddd3'
+  on-surface: '#261813'
+  on-surface-variant: '#50453e'
+  inverse-surface: '#3d2d27'
+  inverse-on-surface: '#ffede7'
+  outline: '#82746d'
+  outline-variant: '#d4c3ba'
+  surface-tint: '#79573f'
+  primary: '#553722'
+  on-primary: '#ffffff'
+  primary-container: '#6f4e37'
+  on-primary-container: '#eec1a4'
+  inverse-primary: '#eabda0'
+  secondary: '#944a0d'
+  on-secondary: '#ffffff'
+  secondary-container: '#ff9f5d'
+  on-secondary-container: '#743600'
+  tertiary: '#463d2b'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#5e5441'
+  on-tertiary-container: '#d7c8b0'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#ffdcc6'
+  primary-fixed-dim: '#eabda0'
+  on-primary-fixed: '#2d1604'
+  on-primary-fixed-variant: '#5f402a'
+  secondary-fixed: '#ffdbc7'
+  secondary-fixed-dim: '#ffb688'
+  on-secondary-fixed: '#311300'
+  on-secondary-fixed-variant: '#733500'
+  tertiary-fixed: '#f0e0c8'
+  tertiary-fixed-dim: '#d3c5ad'
+  on-tertiary-fixed: '#221b0b'
+  on-tertiary-fixed-variant: '#4f4533'
+  background: '#fff8f6'
+  on-background: '#261813'
+  surface-variant: '#f7ddd3'
+typography:
+  display-slide:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 48px
+    fontWeight: '700'
+    lineHeight: 56px
+    letterSpacing: -0.02em
+  headline-xl:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: 44px
+    letterSpacing: -0.015em
+  headline-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 28px
+    fontWeight: '600'
+    lineHeight: 36px
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 22px
+    fontWeight: '600'
+    lineHeight: 28px
+  title-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 18px
+    fontWeight: '600'
+    lineHeight: 24px
+  body-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 16px
+    fontWeight: '400'
+    lineHeight: 24px
+  body-md:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: 20px
+  body-sm:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
+  label-md:
+    fontFamily: Inter
+    fontSize: 13px
+    fontWeight: '500'
+    lineHeight: 18px
+    letterSpacing: 0.01em
+  label-sm:
+    fontFamily: Inter
+    fontSize: 11px
+    fontWeight: '600'
+    lineHeight: 14px
+    letterSpacing: 0.04em
+  metric-display:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 56px
+    fontWeight: '800'
+    lineHeight: 60px
+    letterSpacing: -0.03em
+rounded:
+  sm: 0.25rem
+  DEFAULT: 0.5rem
+  md: 0.75rem
+  lg: 1rem
+  xl: 1.5rem
+  full: 9999px
+spacing:
+  gutter: 1.5rem
+  gutter-deck: 2.5rem
+  margin: 2rem
+  margin-deck: 4rem
+  space-xs: 0.25rem
+  space-sm: 0.5rem
+  space-md: 1rem
+  space-lg: 1.5rem
+  space-xl: 2rem
+  space-2xl: 3rem
+---
+
+## Brand & Style
+
+This design system is tailored for high-stakes, competitive pitch environments—specifically college and national hackathon stages where technical sophistication and product maturity must be communicated within seconds. The tone balances enterprise-grade software credibility with an inviting, civic-oriented warmth. 
+
+Rather than leaning into generic ultra-dark tech tropes or stark clinic whites, the visual language utilizes an editorial warm-earth palette anchored by deep espresso, mocha structural elements, and ambient champagne surfaces. The overall aesthetic merges modern SaaS UI precision (crisp data visualizations, disciplined modular cards, state-driven workflow steppers) with tactile presentation polish. The visual narrative signals dependability, operational readiness, and high aesthetic execution to jury panels and venture judges alike.
+
+## Colors
+
+The color system establishes functional hierarchy tailored for 16:9 high-luminance projectors and displays:
+
+- **Base Canvas (`#FFFAF2` - Warm Ivory):** Replaces harsh standard white, mitigating eye strain and delivering an elevated, premium presentation ground.
+- **Primary Structural Accent (`#6F4E37` - Mocha Brown):** Drives foundational typography, persistent slide navbars, modal frames, and high-level card boundaries.
+- **Interactive Call-to-Action (`#BF6B2E` - Burnt Amber):** High-energy primary accent reserved exclusively for critical action triggers, focal interactive nodes, active workflow indicators, and key metrics.
+- **Surface Highlight (`#F7E7CE` - Champagne Gold):** Deployed across feature callouts, active card backgrounds, and emphasized table rows.
+- **Text & High-Contrast Foreground (`#34251F` - Dark Espresso):** High-legibility anchor for body copy, metric digits, and dense dashboard contents.
+- **Borders & Dividers (`#D8C3A5` - Soft Taupe):** Subtle structural boundaries ensuring clear definition between adjacent modules without cognitive weight.
+- **Semantic Feedback:**
+  - **Success / Approved (`#879078` - Muted Sage):** Used for healthy resource counts, confirmed allocations, and completed stages.
+  - **Alert / Pending (`#A94438` - Muted Brick):** Used for bottlenecks, urgent requests, depleted stock, and attention-required flags.
+
+## Typography
+
+Typography establishes an immediate hierarchy across macro slide storytelling and micro dashboard layouts:
+
+- **Display & Headlines (Plus Jakarta Sans):** Geometric yet friendly contours project an approachable, product-forward feel. Display scales (`display-slide` and `headline-xl`) carry tighter negative tracking to preserve compactness and punch across projected keynotes.
+- **Interface Metrics (`metric-display`):** Heavyweight numbers designed for big data callouts (e.g., "$1.2M Saved", "99.4% Fulfillment").
+- **Body & Captions (Plus Jakarta Sans):** Retains crisp legibility in paragraph layouts and summary bullet cards.
+- **Labels, Badges, and Data Tables (Inter):** Systematically applied to status pills, navigation indices, table columns, and form inputs to maximize dense data parsing and clarity.
+
+## Layout & Spacing
+
+The system enforces a dual-purpose layout engine: a 16:9 presentation slide canvas (1920×1080 native scale) hosting an embedded 12-column responsive SaaS product grid.
+
+- **Presentation Canvas (16:9):** Uses a disciplined outer breathing room of `margin-deck` (64px / 4rem) and horizontal card column gaps of `gutter-deck` (40px / 2.5rem). Slides organize content into three primary archetypes:
+  1. *Split Narrative (60/40):* Left side handles the narrative pitch, thesis, and core metric; right side holds the interactive SaaS workflow preview.
+  2. *Tri-Card Architecture:* 3 equal columns spanning 4 grid units each for feature, persona, or validation breakdowns.
+  3. *Full-Bleed Product Showcase:* Single focus mockup spanning 12 columns with peripheral telemetry metrics.
+- **Component Layout:** Nested cards, dashboards, and form containers strictly operate on a standard 8pt spatial baseline (`space-xs` through `space-2xl`). Consistent internal padding keeps complex data modules easily digestible for quick-glance jury comprehension.
+
+## Elevation & Depth
+
+Depth is conveyed through a layered warm-substrate architecture rather than heavy drop shadows:
+
+- **Layer 0 (Canvas Base):** Solid `#FFFAF2` (Warm Ivory).
+- **Layer 1 (Card & Module Foundation):** `#FFFFFF` surfaces bounded by a 1px solid `#D8C3A5` (Soft Taupe) border. Shadows are ambient and tinted: `0 4px 20px -2px rgba(52, 37, 31, 0.04)`.
+- **Layer 2 (Highlighted & Interactive Surfaces):** Solid `#F7E7CE` (Champagne Gold) cards or raised floating overlays. Shadows deepen slightly: `0 8px 30px -4px rgba(52, 37, 31, 0.08)`.
+- **Layer 3 (Modals, Popovers & Contextual Stepper Menus):** Pure white surfaces with a micro-border `rgba(111, 78, 55, 0.15)` and an ambient diffuse shadow: `0 16px 40px -8px rgba(52, 37, 31, 0.14)`.
+- **Glass Accents:** Translucent elements (such as persistent floating slide decks or dashboard filters) use `rgba(255, 250, 242, 0.82)` paired with a `12px` backdrop blur and an outline of `1px solid rgba(216, 195, 165, 0.5)`.
+
+## Shapes
+
+The design system maintains a balanced `Rounded` (Level 2) shape hierarchy. This softens analytical dashboard elements while retaining structural SaaS discipline:
+
+- **Standard Containers & Cards:** `0.5rem` (8px) border radius for compact UI widgets, increasing to `1rem` (16px) for major presentation cards.
+- **Workflow Steppers & Hero Cards:** `1.5rem` (24px) border radius for distinct focal sections.
+- **Form Inputs & Action Buttons:** Uniform `0.5rem` (8px) radius to maintain high visual alignment with embedded input fields.
+- **Badges, Tags, and Stepper Nodes:** Fully pill-shaped (`9999px`) for quick visual segmentation and status scanning.
+
+## Components
+
+### Buttons & Interactive Triggers
+- **Primary CTA:** Solid Burnt Amber (`#BF6B2E`) background with high-contrast Warm Ivory (`#FFFAF2`) text. 8px radius, semi-bold Inter typography, 10px 20px padding. Hover state: slight brightness lift with a subtle shadow expansion.
+- **Secondary Action:** Transparent base with a 1.5px Mocha Brown (`#6F4E37`) outline and Mocha Brown text.
+- **Tertiary / Sub-action:** Soft Champagne Gold (`#F7E7CE`) fill with Mocha Brown text and zero border.
+
+### Badges & Status Indicators
+- **Approved / Active:** Muted Sage fill at 15% opacity (`rgba(135, 144, 120, 0.15)`), solid Muted Sage text (`#879078`), and a 6px solid dot indicator.
+- **Pending / Action Required:** Muted Brick fill at 15% opacity (`rgba(169, 68, 56, 0.15)`), solid Muted Brick text (`#A94438`), accompanied by an alert icon.
+- **Neutral Category:** Champagne Gold (`#F7E7CE`) fill with Mocha Brown (`#6F4E37`) text.
+
+### Workflow Stepper
+- A horizontal multi-stage path tracking real-time handoffs:
+  - *Completed Step:* Mocha Brown circle with a white checkmark, linked by a solid 2px Mocha Brown path.
+  - *Active Step:* Burnt Amber outer ring with a pulsing center pip, linked to adjacent cards.
+  - *Upcoming Step:* Soft Taupe border with an empty canvas fill.
+
+### Cards & Dashboard Panels
+- **Standard Card:** Clean white backdrop, 1px `#D8C3A5` border, rounded-lg corners, padded by `space-lg` (24px).
+- **Featured Card:** Champagne Gold (`#F7E7CE`) background, Mocha Brown accents, framing value propositions or key judge takeaways.
+- **Metric Highlight Card:** Top-bordered with a 4px Burnt Amber line, housing a 56px bold figure, micro-label, and positive trend pill.
+
+### Form Inputs & Filters
+- Clean white field with a Soft Taupe (`#D8C3A5`) border. Active focus transitions to a 1.5px Mocha Brown border with an amber tinted focus-ring (`rgba(191, 107, 46, 0.2)`).
+
+### Presentation Deck Components
+- **Slide Category Header:** Uppercase 11px Inter label with 0.08em letter spacing, prefixed by an amber slash (`// MARKET OPPORTUNITY`).
+- **Telemetry Bar:** Top or bottom utility dock displaying the hackathon team identifier, current slide step counter, and live platform demo timestamp.

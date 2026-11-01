@@ -1,0 +1,1024 @@
+# ROLE
+
+Act as a senior full-stack software engineer, UI/UX designer, database architect, and product developer.
+
+Build a complete, responsive, functional web application named **ResourceBridge** for the problem statement:
+
+**"Unlock Underused Equipment and Spaces."**
+
+Do not create only a landing page or static UI mockup. Build a working MVP with functional navigation, resource discovery, booking requests, approval workflows, database persistence, role-based dashboards, and resource return tracking.
+
+If a feature requires external configuration, implement the interface and clearly explain what configuration is needed. Never pretend an unconfigured integration is working.
+
+# 1. PROJECT IDENTITY
+
+Application name: ResourceBridge
+
+Tagline: Share Resources. Reduce Costs. Build More.
+
+Mission:
+Help colleges, educational institutions, laboratories, makerspaces, organizations, and communities discover and share underused equipment and spaces safely and efficiently.
+
+Problem:
+Valuable resources remain unused while other people need access to similar equipment and facilities. Resource discovery, booking, approval, and accountability can be fragmented across manual processes.
+
+Solution:
+A centralized platform that enables users to discover resources, check eligibility, request bookings, receive approvals, check resources out, and confirm returns.
+
+Primary users:
+1. Requesters or borrowers.
+2. Resource owners.
+3. Institution managers.
+4. Administrators.
+
+# 2. REQUIRED TECHNOLOGY STACK
+
+Build the application using:
+
+Frontend:
+- React.
+- TypeScript.
+- Vite, if supported by the available environment.
+- Tailwind CSS or a consistent CSS-based design system.
+- Lucide icons or an equivalent lightweight icon library.
+- Reusable components and clean project structure.
+
+Backend:
+Use Supabase with PostgreSQL as the primary backend.
+
+Use Supabase for:
+- Authentication.
+- Database persistence.
+- Role-based access.
+- Resource records.
+- Booking records.
+- Approval workflows.
+- Check-in and return records.
+- Incident records.
+- Notifications.
+- Activity history.
+
+Use Supabase Row Level Security (RLS) to protect data.
+
+If Supabase credentials are unavailable, build a clearly labelled demo mode using realistic sample data and localStorage for persistence. Keep the application architecture ready for Supabase integration.
+
+Do not mix Firebase and Supabase unnecessarily.
+
+IMPORTANT:
+- Never place a Supabase service-role key or other privileged secret in frontend code.
+- Use only the public client configuration in the frontend.
+- Implement privileged operations through trusted server-side functions or other appropriate protected mechanisms.
+- Never expose passwords, private credentials, or API keys.
+- Do not claim that authentication, security rules, or database persistence are functional until they have been configured and tested.
+
+# 3. BRAND COLORS AND DESIGN SYSTEM
+
+Use this exact color palette throughout the website.
+
+Primary — Mocha Brown:
+#6F4E37
+
+Secondary — Champagne Gold:
+#F7E7CE
+
+Accent — Burnt Amber:
+#BF6B2E
+
+Dark Text — Dark Espresso:
+#34251F
+
+Main Background — Warm Ivory:
+#FFFAF2
+
+Borders — Soft Taupe:
+#D8C3A5
+
+Success — Muted Sage:
+#879078
+
+Error — Muted Brick:
+#A94438
+
+COLOR RULES:
+- Use Mocha Brown for navigation, headings, branding, and major UI elements.
+- Use Champagne Gold for highlighted cards and secondary panels.
+- Use Burnt Amber for primary buttons, active navigation, and important actions.
+- Use Dark Espresso for body text.
+- Use Warm Ivory for main backgrounds.
+- Use Soft Taupe for borders and dividers.
+- Use Muted Sage for approved bookings, successful returns, and completed actions.
+- Use Muted Brick for rejected requests, validation errors, and incidents requiring attention.
+
+VISUAL STYLE:
+- Premium, modern, professional SaaS design.
+- Warm, elegant earth-tone appearance.
+- Clean typography.
+- Rounded cards.
+- Subtle shadows.
+- Consistent spacing.
+- Clear visual hierarchy.
+- Attractive but restrained illustrations.
+- High-quality resource images.
+- Minimal unnecessary decoration.
+
+Avoid:
+- Excessive gradients.
+- Neon colors.
+- Overly dark interfaces.
+- Crowded layouts.
+- Tiny text.
+- Excessive animations.
+- Fake statistics.
+- Fake security claims.
+
+Make the website feel like a genuine product that could be demonstrated to a hackathon jury.
+
+# 4. RESPONSIVE DESIGN
+
+The website must work on:
+- Mobile phones from approximately 320px wide.
+- Large smartphones.
+- Tablets.
+- Laptops.
+- Desktop monitors.
+
+Use a mobile-first responsive design.
+
+Desktop:
+- Sidebar navigation.
+- Multi-column dashboard layouts.
+- Resource card grids.
+- Full booking tables and charts.
+
+Tablet:
+- Collapsible sidebar.
+- Reduced grid columns.
+- Appropriately resized forms and cards.
+
+Mobile:
+- Compact header.
+- Hamburger menu or suitable bottom navigation.
+- Single-column cards.
+- Full-width form controls.
+- Readable booking information.
+- Compact calendar or agenda views.
+- No horizontal page overflow.
+
+Use CSS Grid, Flexbox, responsive breakpoints, relative sizing, and responsive images.
+
+Test at these viewport sizes:
+320px, 375px, 430px, 768px, 1024px, 1366px, and 1920px.
+
+Do not simply shrink the desktop design. Rearrange content intelligently for each device.
+
+# 5. APPLICATION STRUCTURE
+
+Create these main pages:
+
+1. Landing Page.
+2. Sign Up.
+3. Login.
+4. Role Selection or Role-Based Onboarding.
+5. User Dashboard.
+6. Discover Resources.
+7. Resource Details.
+8. Request Booking.
+9. My Bookings.
+10. Booking Details.
+11. Owner Dashboard.
+12. Manage Resources.
+13. Add or Edit Resource.
+14. Manage Booking Requests.
+15. Check-In and Check-Out.
+16. Return Confirmation.
+17. Incident Reporting.
+18. Institution Manager Dashboard.
+19. Admin Dashboard.
+20. Notifications.
+21. Activity History.
+22. User Profile.
+23. Help and Usage Guidelines.
+
+Use React Router or an equivalent routing solution.
+
+Every navigation item must lead to a functional page or clearly labelled feature screen. Do not leave buttons that appear functional but do nothing.
+
+# 6. LANDING PAGE
+
+Create an attractive landing page for ResourceBridge.
+
+HEADER:
+- ResourceBridge logo.
+- Home.
+- Discover Resources.
+- How It Works.
+- About.
+- Login.
+- Get Started button.
+
+HERO SECTION:
+
+Headline:
+"Great Resources Should Never Sit Unused."
+
+Supporting text:
+"Discover, book, and share equipment and spaces through one trusted platform."
+
+Primary button:
+"Explore Resources"
+
+Secondary button:
+"List a Resource"
+
+Include a polished illustration or image collage showing:
+- Laboratory equipment.
+- Computers.
+- Engineering tools.
+- Meeting rooms.
+- Classrooms.
+- Shared workspaces.
+
+HOW IT WORKS:
+Show four steps:
+1. Discover available resources.
+2. Check availability and eligibility.
+3. Request a booking.
+4. Use and return responsibly.
+
+FEATURE CARDS:
+- Easy Discovery.
+- Transparent Booking.
+- Accountable Handover.
+- Better Resource Utilization.
+
+Include a section for resource categories.
+
+Include a final call to action:
+"Make Better Use of What You Already Have."
+
+Footer:
+- About ResourceBridge.
+- Help.
+- Usage Guidelines.
+- Privacy.
+- Contact.
+
+Do not include unsupported numerical impact claims.
+
+# 7. AUTHENTICATION AND USER ROLES
+
+Support four roles:
+
+A. REQUESTER / BORROWER
+Can:
+- Discover resources.
+- View resource details.
+- Submit booking requests.
+- View personal booking history.
+- Cancel eligible requests.
+- Complete check-in and return steps.
+- Report incidents.
+- Receive notifications.
+
+B. RESOURCE OWNER
+Can:
+- Create and manage their resource listings.
+- Set availability and usage rules.
+- Review requests for their resources.
+- Approve or reject requests.
+- Record handovers and returns.
+- Review reported incidents.
+- View authorized resource activity.
+
+C. INSTITUTION MANAGER
+Can:
+- Manage institution-level resources.
+- Configure booking rules.
+- Resolve booking conflicts.
+- Review overdue items.
+- View utilization summaries.
+- Manage authorized institutional users.
+
+D. ADMINISTRATOR
+Can:
+- Manage users and roles.
+- Manage resource categories.
+- Review platform activity.
+- Configure platform-wide settings.
+- Monitor system-level records.
+
+SECURITY REQUIREMENTS:
+- Enforce permissions in the backend, not only in the UI.
+- Do not allow users to assign themselves administrator privileges.
+- Protect personal information.
+- Prevent unauthorized users from changing other users' resources or bookings.
+- Require appropriate permissions for approval, check-out, return verification, and incident resolution.
+- Keep an audit record of important actions.
+
+For the initial demo, provide a safe and clearly labelled demo-login experience if real authentication is not configured.
+
+Never expose a shared administrator password or privileged credentials.
+
+# 8. RESOURCE DISCOVERY
+
+Create a fully functional resource discovery page.
+
+Include:
+- Search by resource name.
+- Search by keyword.
+- Filter by category.
+- Filter by location.
+- Filter by availability.
+- Filter by eligibility.
+- Sort by name.
+- Sort by availability where appropriate.
+- Clear Filters button.
+
+RESOURCE CATEGORIES:
+- Computers and Laptops.
+- Laboratory Equipment.
+- Engineering Tools.
+- Robotics Equipment.
+- Photography and Audio Equipment.
+- Meeting Rooms.
+- Classrooms.
+- Workshops and Makerspaces.
+- Other Shared Resources.
+
+Each resource card must show:
+- Resource image.
+- Resource name.
+- Category.
+- Location.
+- Short description.
+- Availability status.
+- Eligibility indicator.
+- View Details button.
+
+Example fictional resources:
+- 3D Printer — Engineering Lab.
+- Oscilloscope — Electronics Laboratory.
+- Robotics Kit — Innovation Center.
+- Laptop Workstation — Computing Lab.
+- Seminar Room — Block A.
+- DSLR Camera — Media Department.
+
+Clearly label sample resources as demo data when appropriate.
+
+The search and filters must actually work against the available dataset.
+
+# 9. RESOURCE DETAILS PAGE
+
+Each resource must have a detailed page.
+
+Include:
+- Resource image gallery.
+- Resource name.
+- Description.
+- Category.
+- Location.
+- Responsible owner.
+- Technical specifications.
+- Available booking slots.
+- Eligibility requirements.
+- Training requirements, if applicable.
+- Usage instructions.
+- Safety instructions, if applicable.
+- Maximum booking duration.
+- Availability status.
+- Book Resource button.
+
+Display helpful messages when:
+- The resource is unavailable.
+- The user is ineligible.
+- Training is required.
+- The user must sign in.
+- An approval is required.
+
+Do not permit a user to book an unavailable resource or bypass required eligibility checks.
+
+# 10. BOOKING SYSTEM
+
+Implement a functional booking request system.
+
+The booking form must include:
+- Resource.
+- Requested date.
+- Start time.
+- End time.
+- Purpose.
+- Number of users, if relevant.
+- Required training confirmation.
+- Agreement to usage rules.
+
+Validate all fields.
+
+BOOKING RULES:
+- End time must be after start time.
+- Past time slots must not be bookable.
+- The requested slot must fall within resource availability.
+- Booking duration must respect the resource's rules.
+- Overlapping approved bookings must be prevented.
+- Required eligibility conditions must be checked.
+- Restricted resources must require authorized approval.
+
+Show a booking summary before submission.
+
+After submission, display:
+"Booking request submitted successfully."
+
+The initial status should be:
+Pending Approval.
+
+Do not automatically treat a submitted request as approved.
+
+Prevent duplicate submissions where practical.
+
+If multiple users attempt to reserve the same resource simultaneously, enforce conflict checks at the backend or database level.
+
+# 11. BOOKING STATUS SYSTEM
+
+Support these statuses:
+
+- Draft.
+- Pending Approval.
+- Approved.
+- Rejected.
+- Cancelled.
+- Checked Out.
+- Return Pending.
+- Returned.
+- Overdue.
+- Review Required.
+
+Display each status using a readable label and suitable icon.
+
+Suggested colors:
+- Pending: Champagne Gold.
+- Approved: Muted Sage.
+- Rejected: Muted Brick.
+- Checked Out: Burnt Amber.
+- Returned: Muted Sage.
+- Review Required: Muted Brick.
+
+Make status changes consistent across all dashboards.
+
+Record who performed each important status change and when.
+
+# 12. REQUESTER DASHBOARD
+
+Create a user dashboard with:
+
+WELCOME SECTION:
+"Welcome back!"
+
+SUMMARY CARDS:
+- Upcoming Bookings.
+- Pending Requests.
+- Active Borrowings.
+- Completed Returns.
+
+MAIN SECTIONS:
+- Recent Bookings.
+- Upcoming Reservations.
+- Recommended Resources.
+- Recent Notifications.
+
+QUICK ACTIONS:
+- Discover Resources.
+- View My Bookings.
+- Report an Issue.
+
+Each card and button must navigate to the relevant page.
+
+Use realistic demo data when the database is not configured.
+
+Clearly distinguish sample data from live data.
+
+# 13. RESOURCE OWNER DASHBOARD
+
+Create a separate owner dashboard.
+
+SUMMARY CARDS:
+- My Listed Resources.
+- Pending Requests.
+- Approved Bookings.
+- Items Currently Borrowed.
+- Returns Awaiting Inspection.
+
+FEATURES:
+- Add Resource button.
+- Edit Resource.
+- Manage Availability.
+- View Booking Requests.
+- Approve Request.
+- Reject Request.
+- Record Check-Out.
+- Verify Return.
+- Review Incidents.
+
+Each request should display:
+- Requester.
+- Resource.
+- Requested date and time.
+- Purpose.
+- Eligibility status.
+- Training status, where applicable.
+- Request status.
+
+Require an authorized owner or manager to approve or reject requests.
+
+Record decisions in the activity history.
+
+# 14. ADD AND MANAGE RESOURCES
+
+Create an Add Resource form.
+
+Fields:
+- Resource name.
+- Category.
+- Description.
+- Location.
+- Responsible owner.
+- Resource image.
+- Specifications.
+- Availability schedule.
+- Booking duration limit.
+- Eligibility rules.
+- Training requirements.
+- Usage instructions.
+- Safety instructions.
+- Approval requirement.
+
+Include:
+- Save Draft.
+- Publish Resource.
+- Edit.
+- Archive.
+
+Validate required fields.
+
+Only authorized users should create or modify listings.
+
+Allow image uploads only if the required storage integration is configured. Otherwise, provide a demo image URL or local preview workflow and clearly explain the limitation.
+
+# 15. CHECK-IN AND CHECK-OUT
+
+Implement a clear handover workflow.
+
+CHECK-OUT:
+- Verify the approved booking.
+- Confirm the resource identity.
+- Record collection time.
+- Record initial condition.
+- Allow optional photo evidence.
+- Confirm handover.
+- Change status to Checked Out.
+
+RETURN:
+- Confirm the related booking.
+- Record return time.
+- Record final condition.
+- Allow optional photo evidence.
+- Record owner or authorized staff verification.
+- Change status to Returned or Review Required.
+
+Show the initial and final condition records side by side when possible.
+
+Do not permit unauthorized users to confirm a handover or verify another user's return.
+
+# 16. INCIDENT REPORTING
+
+Build an incident reporting feature.
+
+Fields:
+- Related resource.
+- Related booking.
+- Incident category.
+- Description.
+- Optional photo evidence.
+- Date and time.
+- Submit Report button.
+
+Incident statuses:
+- Open.
+- Under Review.
+- Resolved.
+
+Authorized owners or managers can:
+- View incidents for their resources.
+- Add review notes.
+- Update the incident status.
+- Record resolution details.
+
+Do not automatically assign blame to a borrower.
+
+Restrict access to incident details according to the user's role and institutional permissions.
+
+# 17. FAIR ACCESS AND WAITLIST
+
+Create basic resource allocation support.
+
+Include:
+- Availability calendar.
+- Conflict detection.
+- Booking rules.
+- Waitlist option when a resource is unavailable.
+- Notification when availability changes.
+
+Use transparent, configurable allocation rules.
+
+Do not fabricate a priority score or promise a user's waitlist position unless the allocation system actually calculates it.
+
+For the MVP, a simple first-come-first-served waitlist may be used if permitted by the institution's rules.
+
+# 18. NOTIFICATIONS
+
+Create an in-app notification center.
+
+Notification types:
+- Booking request submitted.
+- Booking approved.
+- Booking rejected.
+- Booking cancelled.
+- Upcoming return reminder.
+- Resource checked out.
+- Resource returned.
+- Incident status updated.
+
+Each notification should include:
+- Title.
+- Message.
+- Timestamp.
+- Read/unread status.
+- Link to the relevant resource or booking.
+
+Implement working in-app notifications.
+
+Email, SMS, and push notifications should remain optional integrations unless their services are properly configured.
+
+Do not display a notification as successfully sent through an external service if that integration is not configured.
+
+# 19. ACTIVITY HISTORY
+
+Create an activity history page.
+
+Record important actions:
+- Resource created.
+- Resource updated.
+- Booking submitted.
+- Booking approved or rejected.
+- Booking cancelled.
+- Resource checked out.
+- Resource returned.
+- Incident reported.
+- Incident resolved.
+
+Each activity record should include:
+- Action.
+- Timestamp.
+- Responsible user.
+- Related resource or booking.
+- Relevant status change.
+
+Restrict access to audit records according to role and permissions.
+
+Audit records must not be editable by ordinary users.
+
+# 20. INSTITUTION MANAGER DASHBOARD
+
+Create a manager dashboard with:
+- Total listed resources.
+- Available resources.
+- Pending approvals.
+- Active bookings.
+- Overdue items.
+- Returns awaiting inspection.
+- Resource utilization summaries.
+- Recent incidents.
+
+Include:
+- Date filters.
+- Category filters.
+- Location filters.
+- Resource activity tables.
+- Simple charts.
+
+Calculate summary values from available database records or demo data.
+
+Do not hard-code fake performance claims.
+
+If no records exist, display a useful empty state instead of misleading numbers.
+
+# 21. ADMIN DASHBOARD
+
+Create an administrator interface for:
+- User management.
+- Role management.
+- Resource category management.
+- Institution settings.
+- Activity monitoring.
+- Incident overview.
+- Platform configuration.
+
+Protect administrator functions with backend authorization.
+
+Never allow role escalation through editable frontend fields alone.
+
+If an administrator creates or changes a user's role, validate the operation using trusted backend logic.
+
+# 22. DATABASE DESIGN
+
+Create a suitable PostgreSQL schema using Supabase migrations.
+
+Recommended tables:
+
+1. profiles
+2. institutions
+3. resources
+4. resource_availability
+5. bookings
+6. booking_approvals
+7. resource_handover_records
+8. incidents
+9. notifications
+10. activity_logs
+11. waitlist_entries
+12. resource_categories
+
+Important relationships:
+- A profile may belong to an institution.
+- A resource has an owner and may belong to an institution.
+- A booking references a resource and a requester.
+- An approval references a booking and the responsible approver.
+- Handover records reference a booking.
+- Incidents may reference a resource and a booking.
+- Notifications belong to recipients.
+- Activity logs record authorized actions.
+
+Use appropriate:
+- Primary keys.
+- Foreign keys.
+- Unique constraints.
+- Check constraints.
+- Timestamps.
+- Indexes.
+- Row Level Security policies.
+
+Prevent overlapping approved reservations for the same resource using an appropriate database-level constraint or transaction-safe reservation mechanism.
+
+Use migrations rather than relying solely on manually created tables.
+
+Create a seed script for clearly labelled demo resources and test users where supported.
+
+Do not include real personal data in seed records.
+
+# 23. SECURITY AND DATA VALIDATION
+
+Implement:
+- Authentication.
+- Backend authorization.
+- Row Level Security.
+- Server-side validation for sensitive operations.
+- Safe handling of uploaded files.
+- Input validation.
+- Error handling.
+- Booking conflict prevention.
+- Protection against unauthorized role changes.
+- Restricted access to personal information.
+
+Do not trust role information supplied only by the browser.
+
+Do not put privileged keys in client-side environment variables.
+
+Use environment variables for configuration and provide a safe example environment file without real credentials.
+
+If a security feature cannot be implemented in the available environment, document the limitation clearly.
+
+# 24. UI DETAILS AND INTERACTIONS
+
+Implement:
+- Working buttons.
+- Functional forms.
+- Search and filtering.
+- Loading states.
+- Empty states.
+- Success messages.
+- Error messages.
+- Confirmation dialogs for important actions.
+- Responsive navigation.
+- Accessible form labels.
+- Keyboard-friendly interactions.
+
+Use subtle transitions and restrained animation.
+
+Respect reduced-motion preferences.
+
+Use realistic images of equipment and spaces.
+
+If external images are unavailable, use local placeholders or simple illustrations rather than broken image links.
+
+# 25. EMPTY STATES AND DEMO EXPERIENCE
+
+The application must remain understandable even before real users or resources are added.
+
+Examples:
+
+No resources:
+"No resources found. Try changing your filters."
+
+No bookings:
+"You haven't made any booking requests yet."
+
+No notifications:
+"You're all caught up."
+
+No incidents:
+"No incidents have been reported."
+
+When using sample data, show a visible "Demo Data" indicator.
+
+If demo mode uses localStorage, explain that its records are stored in that browser and are not shared between users or devices.
+
+Do not present localStorage demo mode as a real multi-user backend.
+
+# 26. PROJECT STRUCTURE
+
+Organize the project into reusable files and folders.
+
+Suggested structure:
+
+src/
+  components/
+    layout/
+    navigation/
+    cards/
+    forms/
+    booking/
+    resources/
+    notifications/
+    common/
+  pages/
+    LandingPage.tsx
+    LoginPage.tsx
+    RegisterPage.tsx
+    UserDashboard.tsx
+    DiscoverResources.tsx
+    ResourceDetails.tsx
+    BookingRequest.tsx
+    MyBookings.tsx
+    OwnerDashboard.tsx
+    ManageResources.tsx
+    BookingApprovals.tsx
+    HandoverPage.tsx
+    IncidentReports.tsx
+    ManagerDashboard.tsx
+    AdminDashboard.tsx
+    NotificationsPage.tsx
+    ActivityHistory.tsx
+    ProfilePage.tsx
+  hooks/
+  services/
+  types/
+  utils/
+  styles/
+
+supabase/
+  migrations/
+  seed.sql
+
+Keep components reusable and avoid putting the entire application into one enormous component.
+
+Adapt this structure as necessary for the actual development environment.
+
+# 27. IMPLEMENTATION PLAN
+
+Build the application in this order:
+
+PHASE 1 — FOUNDATION
+- Create the project structure.
+- Configure the color palette.
+- Build responsive navigation.
+- Create reusable buttons, cards, badges, and form components.
+- Implement routing.
+
+PHASE 2 — RESOURCE DISCOVERY
+- Build the landing page.
+- Create resource cards.
+- Implement search and filters.
+- Build resource detail pages.
+
+PHASE 3 — BOOKINGS
+- Build the booking form.
+- Implement validation.
+- Add booking statuses.
+- Prevent conflicting reservations.
+- Implement approval and rejection workflows.
+
+PHASE 4 — RESOURCE MANAGEMENT
+- Build requester and owner dashboards.
+- Add resource management.
+- Implement check-in and check-out.
+- Add return confirmation and incident reporting.
+
+PHASE 5 — BACKEND
+- Configure Supabase.
+- Create database migrations.
+- Implement authentication.
+- Apply RLS policies.
+- Connect the application to the database.
+- Add protected server-side operations.
+
+PHASE 6 — FINALIZATION
+- Build manager and admin dashboards.
+- Implement notifications and activity history.
+- Test role permissions.
+- Test booking conflicts.
+- Test responsive layouts.
+- Fix errors and document setup.
+
+Prioritize a complete, working core workflow over many incomplete features.
+
+# 28. REQUIRED END-TO-END DEMONSTRATION
+
+The following scenario must work in the completed MVP:
+
+1. A requester opens ResourceBridge.
+2. The requester discovers an available 3D printer.
+3. The requester opens the resource details.
+4. The requester selects an available time slot.
+5. The requester submits a booking request.
+6. The resource owner sees the pending request.
+7. The owner approves the request.
+8. The requester sees the updated status.
+9. An authorized person records the resource handover.
+10. The requester uses the resource.
+11. An authorized person confirms its return.
+12. The booking status changes to Returned.
+13. The relevant activity history is updated.
+14. The authorized users can view the booking and return records.
+
+If using demo mode, make this workflow demonstrable using sample users and persistent browser data.
+
+If using Supabase, test it using separate authorized accounts.
+
+# 29. TESTING CHECKLIST
+
+Test:
+- Application starts without errors.
+- Navigation works.
+- Resource search works.
+- Filters work.
+- Booking form validation works.
+- Unavailable slots cannot be booked.
+- Overlapping reservations are prevented.
+- Approval and rejection work.
+- Users cannot perform unauthorized actions.
+- Check-in and return workflows work.
+- Incident reporting works.
+- Data persists in the selected storage system.
+- Empty states display correctly.
+- No broken images or buttons remain.
+- No horizontal overflow occurs on mobile.
+- The application works at the specified viewport sizes.
+
+Fix runtime errors and broken workflows before considering the MVP complete.
+
+# 30. FINAL DELIVERY REQUIREMENTS
+
+Deliver:
+
+1. Complete application source code.
+2. Responsive user interface.
+3. Working core booking workflow.
+4. Clear role-based navigation.
+5. Database schema and migration files.
+6. Sample demo data.
+7. Environment variable example file.
+8. Setup instructions in README.md.
+9. Instructions for connecting Supabase.
+10. Instructions for running locally.
+11. Instructions for testing each user role.
+12. A list of implemented features.
+13. A list of features requiring additional configuration.
+14. A list of known limitations.
+
+If deployment is supported, provide deployment instructions and identify any required configuration.
+
+Do not claim the website is deployed unless a working deployment URL exists.
+
+Do not claim a feature works until it has been implemented and tested.
+
+# FINAL COMMAND
+
+Start building ResourceBridge now.
+
+First inspect the available project environment and create the actual application files.
+
+Build a polished, responsive frontend and implement the core resource discovery, booking, approval, handover, and return workflows.
+
+Connect Supabase when credentials and configuration are available. Otherwise, use an explicitly labelled demo mode and explain how to connect the backend.
+
+After implementation, test the complete end-to-end demonstration scenario, fix any errors you find, and provide clear instructions for running the project.
+
+Prioritize a working, trustworthy, responsive MVP with the Mocha Brown, Champagne Gold, and Burnt Amber design system.

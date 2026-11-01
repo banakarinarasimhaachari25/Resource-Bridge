@@ -1,0 +1,6 @@
+{
+  "name": "ResourceBridge",
+  "description": "Share Resources. Reduce Costs. Build More. A centralized platform to discover, book, approve, and track underused equipment and spaces safely and efficiently.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
