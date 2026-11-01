@@ -3,6 +3,8 @@
 > **Tagline:** Share Resources. Reduce Costs. Build More.  
 > **Problem Statement:** Unlock Underused Equipment and Spaces.
 
+https://resource-bridge.vercel.app
+
 ResourceBridge is a centralized, role-based resource-sharing web platform built for colleges, educational institutions, research laboratories, makerspaces, and community organizations. It enables institutions to eliminate idle machinery waste, automate reservation requests, enforce safety training certifications, and verify physical equipment handovers through dual-stage custody logging.
 
 ---
